@@ -10,7 +10,7 @@ public class Array {
     }
 
     public void insert(int element){
-        arr[index] = 
+        arr[index] = element;
     }
 
 }
