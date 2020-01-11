@@ -1,6 +1,6 @@
 package array;
 
-public class Array {
+public class Array<arr> {
     private int length;
     private int index=0;
     int [] arr;
@@ -9,9 +9,30 @@ public class Array {
         arr =new int[length];
     }
 
-    public void insert(int element){
-        arr[index] = element;
-        index++;
+    public void insertValue(int element) {
+        if (index < length) {
+            arr[index] = element;
+            index++;
+        }
+        else{
+            System.out.println("out of bound");
+        }
     }
-
+    
+    public void deleteValue(){
+        if(index>=0){
+            arr[--index]=0;
+        }
+        else{
+            System.out.println("invalid index");
+        }
+    }
+    
+    public void displayArray(){
+        System.out.println("[");
+        for (int i = 0; i < length; i++) {
+            System.out.printf(String.valueOf(arr[i]));
+        }
+        System.out.println("]");
+    }
 }
