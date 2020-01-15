@@ -11,13 +11,12 @@ public class Array<arr> {
 
     public Array(int length){
         this.length=length;
-        arr =new int[length];
+        int []arr =new int[length];
     }
 
-    public void insertValue(int element) {
+    public void insertValue(int element,int index) {
         if (index < length) {
             arr[index] = element;
-            index++;
         }
         else{
             System.out.println("out of bound");
@@ -26,7 +25,7 @@ public class Array<arr> {
     
     public void deleteValue(int index){
         if(index>=0){
-            arr[--index]=0;
+            arr[index]=0;
         }
         else{
             System.out.println("invalid index");
@@ -43,7 +42,7 @@ public class Array<arr> {
 
     public void bubbleSort(int[] arr){
         for(int j=0;j<arr.length-j;j++){//function of bubble sort
-            for(int i=0;i<j;i++){
+            for(int i=0;i<=j;i++){
                 if(arr[i]>arr[i+1]){
                     swapArrayValues(i,i+1,arr);
                 }
@@ -54,7 +53,7 @@ public class Array<arr> {
 
     }
 
-    private void swapArrayValues(int i, int i1,int[]arr) {
+    public void swapArrayValues(int i, int i1,int[]arr) {
         int temp =arr[1];
         arr[i]=arr[i1];
         arr[i1]=temp;
@@ -72,6 +71,4 @@ public class Array<arr> {
         }
         System.out.println(s);
     }
-
-    public  void
 }
