@@ -1,6 +1,6 @@
 package array;
 
-public class Array<arr> {
+public class Array{
     public int[] arr;
     public int s = 0;
     private int length;
@@ -9,7 +9,7 @@ public class Array<arr> {
 
     public Array(int length) {
         this.length = length;
-        int[] arr = new int[length];
+        arr = new int[length];
     }
 
     public void insertValue(int element, int index) {
@@ -29,14 +29,16 @@ public class Array<arr> {
     }
 
     public void displayArray() {
-        System.out.println("[");
+        System.out.printf("[");
         for (int i = 0; i < length; i++) {
-            System.out.printf(String.valueOf(arr[i]));
+            System.out.printf(String.valueOf(arr[i] ));
+            System.out.printf(" ");
+
         }
         System.out.println("]");
     }
 
-    public void bubbleSort(int[] arr) {
+    public void bubbleSort() {
         for (int j = 0; j < arr.length - j; j++) {//function of bubble sort
             for (int i = 0; i < arr.length - j - 1; i++) {
                 if (arr[i] > arr[i + 1]) {
