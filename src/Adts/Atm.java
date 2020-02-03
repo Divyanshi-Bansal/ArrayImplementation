@@ -6,3 +6,5 @@ public interface Atm {
     void showbalance();
     boolean verifypin( int atmpin);
 }
+
+
