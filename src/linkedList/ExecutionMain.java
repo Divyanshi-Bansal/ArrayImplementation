@@ -8,7 +8,7 @@ public class ExecutionMain {
         ll.addLast ( 20 );
         ll.addfirst ( 10 );
         ll.indexOf ( 20 );
-        ll.deleteFirstNode (20);
+        ll.deleteFirstNode ();
         ll.displayNode ();
 
         }

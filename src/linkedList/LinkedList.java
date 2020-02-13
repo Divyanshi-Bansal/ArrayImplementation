@@ -48,20 +48,20 @@ public class LinkedList {
         }
     }
 
-    public void deleteFirstNode(int value){
-        //var second = first.next;
-        //first.next = null;
-        //first=second;
+    public void deleteFirstNode(){ //int value likhna hai
+         var second = first.next;
+        first.next = null;
+        first=second;
 
-        Node current = first;
-        while(current != null){
-            if(current.data == value){
-                first = previousNode ( current );
-                current.data = 0;
-                break;
-            }
-            current = current.next;
-        }
+//        Node current = first;
+//        while(current != null){
+//            if(current.data == value){
+//                first = previousNode ( current );
+//                current.data = 0;
+//                break;
+//            }
+//            current = current.next;
+//        }
     }
 
     public void displayNode(){
@@ -82,6 +82,11 @@ public class LinkedList {
             current=current.next;
         }
         return null;
+    }
+
+    public int  lastNode(){
+//
+        return last.data;
     }
 
 }
