@@ -1,6 +1,8 @@
 package Queue;
 
-public class Queue {
+import queueADT.QueueADT;
+
+public class Queue implements QueueADT {
     private Node front;
     private Node rear;
 
@@ -13,6 +15,7 @@ public class Queue {
             this.data = data;
         }
     }
+
 
     public void addLast(int value){
         Node node  = new Node ( value );
@@ -34,6 +37,24 @@ public class Queue {
 //        front.next = null;
 //        front  = second;
     }
+
+
+    @Override
+    public void addLast() {
+
+    }
+
+    //public void deleteFirst(){}
+
+    public Node getRear() {
+        return rear;
+    }
+
+    public Node getFront() {
+        return front;
+    }
+
+
     public void displayNode(){
         Node current  = front;
         while(current != null){

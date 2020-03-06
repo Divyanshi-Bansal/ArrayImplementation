@@ -48,21 +48,38 @@ public class LinkedList {
         }
     }
 
-    public void deleteFirstNode(){ //int value likhna hai
-         var second = first.next;
-        first.next = null;
-        first=second;
+//    public void deleteFirstNode() { //int value likhna hai
+//        var second = first.next;
+//        first.next = null;
+//        first = second;
+//    }
+    public void deleteAtAnyPosition(int position){
+        Node current = first;
+        Node previous = first;
+        Node tempo = first;
+        if(position >0) {
+            int i = 0;
+            while (i <= position - 1) {
+                previous = current;
+                current = current.next;
+                i++;
+            }
 
-//        Node current = first;
-//        while(current != null){
-//            if(current.data == value){
-//                first = previousNode ( current );
-//                current.data = 0;
-//                break;
-//            }
-//            current = current.next;
-//        }
+            current = previous.next;
+            previous.next = current.next;
+            tempo = current.next;
+        }
+        else{
+            var second = first.next;
+            first.next = null;
+            first = second;
+            tempo = second;
+        }
+        while(tempo != null){
+            tempo = tempo.next;
+        }
     }
+
 
     public void displayNode(){
         Node current = first;
@@ -89,4 +106,25 @@ public class LinkedList {
         return last.data;
     }
 
+    public Node insertNodeAtPosition( int value, int position) {
+        Node node = new Node ( value );
+        int i = 0;
+        Node current = first;
+        Node previous = first;
+        while (i < position) {
+            previous = current;//13
+            current = current.next;//7
+
+            i++;
+        }
+        previous.next = node;
+        node.next = current;
+        while (current != null) {
+            //System.out.println (current.data +"*");
+
+
+            current = current.next;
+        }
+        return  first;
+    }
 }

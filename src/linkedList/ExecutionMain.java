@@ -7,10 +7,11 @@ public class ExecutionMain {
         ll.addLast ( 15 );
         ll.addLast ( 20 );
         ll.addfirst ( 10 );
-        ll.indexOf ( 20 );
-        ll.deleteFirstNode ();
-        ll.displayNode ();
+//        ll.indexOf ( 20 );
+//        ll.deleteFirstNode ();
 
+        ll.insertNodeAtPosition ( 1,1 );
+        ll.displayNode ();
         }
 
 
