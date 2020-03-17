@@ -102,8 +102,13 @@ public class LinkedList {
     }
 
     public int  lastNode(){
-//
         return last.data;
+    }
+    public Boolean isEmpty(){
+        if(first == null){
+            return true ;
+        }
+        return false;
     }
 
     public Node insertNodeAtPosition( int value, int position) {
@@ -146,14 +151,18 @@ public class LinkedList {
         }
         return first;
     }
-//    public static Node getPreviousNode(Node current , Node head){
-//        Node previous = head;
-//        while(previous != null){
-//            if(previous.next == current){
-//                return previous;
-//            }
-//            previous = previous.next;
-//        }
-//        return null;
-//    }
+
+    public String searchNode(int value){
+        Node node = new Node ( value );
+        Node current = first;
+        while(current != null){
+            if(current.data == node.data){
+                String found;
+                return "found";
+            }
+            current = current.next;
+        }
+        return "notfound";
+    }
+
 }

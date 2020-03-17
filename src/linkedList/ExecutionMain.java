@@ -9,8 +9,8 @@ public class ExecutionMain {
         ll.addfirst ( 10 );
         //ll.indexOf ( 10 );
 //        ll.deleteFirstNode ();
-
-        ll.insertNodeAtPosition ( 11,0);
+        System.out.println (ll.searchNode ( 10 ));
+        ll.insertNodeAtPosition ( 11,4);
        // ll.removeDuplicates (  );
         ll.displayNode ();
 
