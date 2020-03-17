@@ -48,11 +48,11 @@ public class LinkedList {
         }
     }
 
-//    public void deleteFirstNode() { //int value likhna hai
-//        var second = first.next;
-//        first.next = null;
-//        first = second;
-//    }
+   public void deleteFirstNode() { //int value likhna hai
+        var second = first.next;
+        first.next = null;
+        first = second;
+    }
     public void deleteAtAnyPosition(int position){
         Node current = first;
         Node previous = first;
@@ -127,4 +127,33 @@ public class LinkedList {
         }
         return  first;
     }
+
+    public  Node removeDuplicates() {
+
+        Node current = first;
+        Node tempo = null;
+        //Node temp = null;
+        while(current != null){
+            Node temp = current.next;
+            //System.out.println (temp.data);
+            if(current.data == temp.data){
+                tempo = previousNode( current );
+                //System.out.println (tempo.data);
+                tempo = current.next;
+                current = null;
+            }
+            current = current.next;
+        }
+        return first;
+    }
+//    public static Node getPreviousNode(Node current , Node head){
+//        Node previous = head;
+//        while(previous != null){
+//            if(previous.next == current){
+//                return previous;
+//            }
+//            previous = previous.next;
+//        }
+//        return null;
+//    }
 }
