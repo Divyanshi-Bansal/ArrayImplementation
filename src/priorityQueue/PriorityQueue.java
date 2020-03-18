@@ -15,5 +15,11 @@ public class PriorityQueue {
         arr = new int[maxSize];
     }
 
+    private boolean isEmpty(){
+        return size==0;
+    }
+    private boolean isFull(){
+        return size == maxSize;
+    }
 
 }
