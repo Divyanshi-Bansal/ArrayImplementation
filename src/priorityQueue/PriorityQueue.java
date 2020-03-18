@@ -22,4 +22,47 @@ public class PriorityQueue {
         return size == maxSize;
     }
 
+    public void dequeue(){
+        if(!isEmpty ()){
+            int response = arr[front];
+            front++;
+            size--;
+        }
+        else{
+            System.out.println ("underflow");
+        }
+    }
+
+    public void enqueue(int element){
+        if(!isFull ()){
+            for(int i=front ; i<maxSize ; i++){
+                for(int j =front ; j< maxSize ; j++){
+                    if(arr[i] > arr[j+1]){
+                        int c = arr[j+1];
+                        arr[j+1] = arr[i];
+                        arr[i] = c;
+                    }
+                }
+            }
+        }
+        else{
+            System.out.println ("overflow");
+        }
+    }
+
+    public boolean peak(int element){
+        for(int i=0; i<maxSize ;i++){
+            if(arr[i] == element){
+                return true;
+            }
+        }
+        return  false;
+    }
+
+    public void display(){
+        for (int i=0;i<size;i++){
+            System.out.print(arr[i+front]+" ");
+        }
+    }
+
 }
