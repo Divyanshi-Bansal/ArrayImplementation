@@ -10,6 +10,7 @@ public class ExecutionMain {
         //ll.indexOf ( 10 );
 //        ll.deleteFirstNode ();
         System.out.println (ll.searchNode ( 10 ));
+        System.out.println (ll.searchNode ( 1 ));
         ll.insertNodeAtPosition ( 11,4);
        // ll.removeDuplicates (  );
         ll.displayNode ();
