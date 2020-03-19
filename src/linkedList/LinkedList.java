@@ -165,4 +165,26 @@ public class LinkedList {
         return "notfound";
     }
 
+    public void addThroughSorting(int value){
+        Node node = new Node(value);
+
+        if(first == null){
+            first = last = node;
+        }
+        else {
+            last.next = node;
+            last = node;
+            Node current = first;
+            while (current != null) {
+                if (node.data < current.data) {
+                    int c = node.data;
+                    node.data = current.data;
+                    current.data = c;
+                }
+                current = current.next;
+            }
+
+        }
+    }
+
 }
